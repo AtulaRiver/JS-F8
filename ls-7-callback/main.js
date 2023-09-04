@@ -141,15 +141,10 @@ var courses = [
 // console.log(list);
 
 
-var courses = ['PHP', 'JS', 'Java'];
+// var courses = ['PHP', 'JS', 'Java'];
 
-courses.length = 10;
+// courses.length = 10;
 
-for(var key of courses) {
-    console.log(key);
-}
-
-
-
-
-
+// for(var key of courses) {
+//     console.log(key);
+// }
