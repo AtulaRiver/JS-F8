@@ -63,40 +63,68 @@
 
 // * mySome() method callback
 
-var courses = [
-    {
-        name: 'Javascript',
-        coin: 680,
-        isFinish: false,
-    },
-    {
-        name: 'PHP',
-        coin: 860,
-        isFinish: true,
-    },
-    {
-        name: 'Ruby',
-        coin: 860,
-        isFinish: false,
-    },
-];
+// var courses = [
+//     {
+//         name: 'Javascript',
+//         coin: 680,
+//         isFinish: false,
+//     },
+//     {
+//         name: 'PHP',
+//         coin: 860,
+//         isFinish: true,
+//     },
+//     {
+//         name: 'Ruby',
+//         coin: 860,
+//         isFinish: false,
+//     },
+// ];
 
-Array.prototype.mySome = function(cb) {
-    for(var index in courses) {
+// Array.prototype.mySome = function(cb) {
+//     for(var index in courses) {
+//         if(this.hasOwnProperty(index)) {
+//             if(cb(this[index]), index, this) {
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+// }
+
+// console.log(courses.mySome((course, index, array) => {
+//     return course.isFinish === true;
+// }));
+
+Array.prototype.myEvery = function(cb) {
+    for(var index in this) {
         if(this.hasOwnProperty(index)) {
-            if(cb(this[index]), index, this) {
-                return true;
+            if(!cb(this[index], index, this)) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 }
 
-console.log(courses.mySome((course, index, array) => {
-    return course.isFinish === true;
-}));
 
+const numbers = [1, 3, 3, 5];
 
+for(var i in numbers) {
+    console.log(i);
+}
+
+console.log(numbers.myEvery(function (number) {
+    return number % 2 !== 0;
+})); // Output: true
+
+console.log(numbers.myEvery(function (number, index) {
+    return index % 2 === 0;
+})); // Output: false
+
+console.log(numbers.myEvery(function (number, index, array) {
+    return array.length % 2 === 0;
+})); // Output: true
 
 
 
