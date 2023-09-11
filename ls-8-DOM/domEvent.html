@@ -10,11 +10,23 @@
             background-color: #000;
             color: #fff;
         }
+
+        .red {
+            color: red;
+        }
+
+        ul {
+            display: none;
+        }
+
+        .pre:focus ~ ul {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-     <!-- 1. Attribute events -->
+    <!-- 1. Attribute events -->
     <h1 onclick="console.log(this);">
         <span>DOM Events</span>
     </h1>
@@ -29,6 +41,37 @@
     <h2>
         Jang Dep Trai 3
     </h2>
+
+    <!-- //* 3. Input / select -->
+    <input type="text" name="" id="">
+    <input type="checkbox" name="" id="">
+    <select name="" id="">
+        <option value="value 1">1</option>
+        <option value="value 2">2</option>
+        <option value="value 3">3</option>
+    </select>
+
+    <!-- //* 4. Key up / down -->
+    <input type="text" class="name">
+
+    <!-- //* 5. PreventDefault -->
+    <br>
+    <a href="http://fb.com">Facebook</a> <br>
+    <a href="http://google.com.vn">Google</a> <br> <br>
+
+    <input class="pre" type="text" name="" id="">
+
+    <ul>
+        <li>JS</li>
+        <li>PHP</li>
+        <li>Ruby</li>
+    </ul>
+
+    <!-- //* 6. StopPropagation: Ngăn chặn sự nổi bọt -->
+    <div>
+        DIV 
+        <button>Click Me!</button>
+    </div>
 </body>
 <script src="./domEvent.js">
 </script>

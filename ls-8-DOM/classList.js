@@ -23,6 +23,8 @@ setTimeout(() => {
 
 setInterval(() => {
     boxElement.classList.toggle('blue')
-}, 1000)
+}, 1000);
+
+console.log(boxElement);
 
 
