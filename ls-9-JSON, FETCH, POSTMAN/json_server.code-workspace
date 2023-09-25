@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../json_server"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ls-9-JSON, FETCH, POSTMAN"
+	}
+}
